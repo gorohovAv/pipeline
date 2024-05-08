@@ -4,8 +4,6 @@ from pydantic import BaseModel
 class Stage(BaseModel):
     stage_name: str
     stage_content: list[str]
-class Pipeline(BaseModel):
-    pass
 
 class GitlabCD():
     def __init__(self, stage: Stage):
@@ -22,3 +20,5 @@ app = FastAPI()
 async def make_gitlab_cd(stage: Stage):
     cicd = GitlabCD(stage)
     return str(cicd)
+
+
