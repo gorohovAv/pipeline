@@ -1,0 +1,5 @@
+cd venv 
+cd scripts  
+.\activate   
+cd src
+uvicorn main:app  

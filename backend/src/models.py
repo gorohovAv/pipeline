@@ -8,3 +8,4 @@ class Pipelines(Base):
 
     id = Column(primary_key = True)
     pipelime_name = Column(String, index="true")
+    pipeline_content = Column(String)
